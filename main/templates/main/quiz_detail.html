@@ -1,0 +1,11 @@
+<h1>Quiz: {{quizdetail}}</h1>
+<ul>
+  {% for question in quizdetail.questions.all %}
+  <li>
+    {{question.name}}
+    <ul>
+      {% for option in question.options.all %} <li>{{option.name}}</li> {% endfor %}
+    </ul>
+  </li>
+  {% endfor %}
+</ul>

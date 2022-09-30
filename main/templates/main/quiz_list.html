@@ -1,0 +1,13 @@
+{% extends "main/base.html" %}
+
+{% block title %} View Quiz {% endblock %}
+
+{% block content  %}
+    <ul>
+        {% for quiz in quizlist %}
+            <li>
+                {{quiz.name}}: <a href={% url 'quizdetails' quiz.id %}> View</a>
+            </li>
+        {% endfor %}    
+    </ul>
+{% endblock %}
